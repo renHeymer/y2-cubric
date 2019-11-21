@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>CUBRIC</title>
+</head>
+<body>
+<nav th:replace="~{fragments/base.html :: nav-header}">
+</nav>
+<script src="/js/swipe.js"></script>
+<main class="site-wrapper">
+    <div th:replace="~{fragments/base.html :: common-dependencies}"></div>
+    <div class="site-wrapper">
+        <div class="site-wrapper-inner ">
+            <div class="cover-container">
+                <div class="alert alert-info">
+                    <strong>Forbidden!</strong> You don't have access rights to this page.
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+</body>
+</html>

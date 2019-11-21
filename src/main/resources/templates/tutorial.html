@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tutorial</title>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="/js/tutorial.js"></script>
+<style>
+    .carousel-inner img {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+</head>
+<body onload="setUp()">
+<nav th:replace="~{fragments/base.html :: nav-header}">
+</nav>
+<div th:replace="~{fragments/base.html :: common-dependencies}"></div>
+
+<div id="trainingContainer"></div>
+<div class="wrapper" id="trainingContent">
+    <h1 class="box header header" id="topicHeader"></h1>
+    <div class="box content" id="trainingText">
+        <div class="trainingSegment">
+            <h3 id="segOneTitle"></h3>
+            <p id="segOne"></p>
+            <div class="row">
+                <div class="simpleCol">
+                    <p id="seg_one_img_txt" style="color: #FFFF66"></p>
+                    <img id="seg_one_img_1">
+                </div>
+                <div class="simpleCol">
+                    <p id="seg_one_img_txt_2"></p>
+                    <img id="seg_one_img_2">
+                </div>
+            </div>
+        </div><br>
+        <div class="trainingSegment">
+            <h3 id="segTwoTitle"></h3>
+            <p id="segTwo"></p>
+            <p id="seg_two_img_txt_1"></p>
+            <img id="seg_two_img_1">
+        </div><br>
+        <div class="trainingSegment">
+            <h3 id="segThreeTitle"></h3>
+            <p id="segThree"></p>
+            <p id="seg_three_img_txt_1"></p>
+            <img id="seg_three_img_1">
+        </div><br>
+        <div class="trainingSegment">
+            <h3 id="segFourTitle"></h3>
+            <p id="segFour"></p>
+            <p id="seg_four_img_txt_1"></p>
+            <img id="seg_four_img_1">
+        </div>
+        <p id="training_img_txt"></p>
+        <img id="training_img_1">
+        <img id="training_img_3">
+        <img id="training_img_4">
+    </div>
+    <div class="box content2" id="trainingImageHolder">
+
+    </div>
+    <img class="box sidebar" id="tutorialLeft" src="/images/icons/back-arrow.svg">
+    <img class="box sidebar2" id="tutorialRight" src="/images/icons/back-arrow.svg">
+</div>
+</body>
+</html>

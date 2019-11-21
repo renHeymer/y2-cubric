@@ -1,0 +1,66 @@
+<!---->
+<!-- Reference (https://v4-alpha.getbootstrap.com/examples/cover/)-->
+<!---->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="/css/app.css" type="text/css">
+</head>
+
+<body>
+<h3>CUBRIC</h3>
+<nav class="masthead clearfix" th:fragment="nav-header" id="nav">
+    <nav class="nav nav-masthead">
+        <a class="nav-link active" href="/home">Home</a>
+        <a class="nav-link" href="/swipe">Swipe</a>
+        <a class="nav-link" href="/tutorial/start">Training</a>
+        <a sec:authorize="hasRole('ROLE_ADMIN')"class="nav-link" href="/admin/dashboard">Dashboard</a>
+        <a sec:authorize="hasRole('ROLE_ADMIN')"class="nav-link" href="/admin/swipes/live">Swipes</a>
+        <a class="nav-link" href="/login">Login/Sign Up</a>
+        <a sec:authorize="isAuthenticated()" class="nav-link" href="/logout">Logout</a>
+    </nav>
+</nav>
+<div class="site-wrapper">
+
+    <div class="site-wrapper-inner ">
+
+        <div class="cover-container">
+
+            <div id="cover-image" th:fragment="cover-image">
+                <img id="home-image" src="/images/brain_scans/brain_3.jpg.png">
+            </div>
+            <div class="innercover">
+
+            </div>
+
+            <div class="mastfoot" th:fragment="footer">
+                <div class="inner">
+                    <p><a href="https://www.cardiff.ac.uk/cardiff-university-brain-research-imaging-centre">Cardiff University Brain Research Imaging Centre</a></p>
+                    <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-buddha" title="Pixel Buddha">Pixel Buddha</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<div th:fragment="common-dependencies">
+    <script src="/webjars/jquery/3.3.1-1/jquery.min.js"></script>
+    <script src="/js/tether.min.js"></script>
+    <script src="/js/ajax/popper.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link type="text/css" href="/css/cover.css" rel="stylesheet">
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback</title>
+</head>
+<body onload="setSlideEvents()">
+<nav th:replace="~{fragments/base.html :: nav-header}">
+</nav>
+<script src="js/feedback.js"></script>
+<link href="/css/app.css" rel="stylesheet">
+<div th:replace="~{fragments/base.html :: common-dependencies}"></div>
+<div th:replace="~{fragments/base.html :: common-dependencies}"></div>
+<div class="site-wrapper">
+    <div class="site-wrapper-inner ">
+        <div class="cover-container">
+            <main id="main-content" class="container-fluid">
+                <div class="row align-items-center justify-content-center " style="margin-top: 10px">
+                    <form name="feedbackForm" action="/feedback" method="POST">
+                        <div>
+                            <h2 class="header"> Please provide us with any feedback using the form below:</h2>
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label> On a scale of 1-5, rate your overall experience:
+                                <input class="form-control col-xs-4" type="range" id="enjoyed" name="enjoyed" min="1"
+                                       max="5">
+                                <span id="enjoyedSliderValLabel">Experience Rate: <span id="enjoyedSliderValue">3</span></span>
+                            </label>
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label> On a scale of 1-5, how difficult was the task to follow?
+                                <input class="form-control col-xs-4" type="range" id="task_right_level"
+                                       name="task_right_level" min="1" max="5">
+                                <span id="taskLevelSliderValueLabel">Task Level Rate: <span
+                                        id="taskLevelSliderValue">3</span></span>
+                            </label>
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label> On a scale of 1-5, how likely are you recommend this service to someone else?
+                                <input class="form-control col-xs-4" type="range" id="recommend" name="recommend"
+                                       min="1" max="5">
+                                <span id="recommendSliderValLabel">Recommend Level Rate: <span
+                                        id="recommendSliderValue">3</span></span>
+                            </label>
+                        </div>
+                        <div class="form-group col-lg-10">
+                            <label> Additional comments (optional):
+                                <input class="form-control" type="text" id="comments" name="comments">
+                            </label>
+                        </div>
+
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+</body>
+</html>

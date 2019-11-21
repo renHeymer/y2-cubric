@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Swipe</title>
+    <meta th:name="_csrf" th:content="${_csrf.token}"/>
+    <meta th:name="_csrf_header" th:content="${_csrf.headerName}"/>
+</head>
+<body onload="setUp()">
+<nav th:replace="~{fragments/base.html :: nav-header}">
+</nav>
+<div th:replace="~{fragments/base.html :: common-dependencies}"></div>
+<link href="/css/app.css" rel="stylesheet">
+<script src="/webjars/jquery/3.3.1-1/jquery.min.js"></script>
+<script src="/js/swipe.js"></script>
+
+<div class="site-wrapper">
+    <main id="main-content">
+        <div id="image-holder" class="container-fluid d-flex justify-content-center align-items-center">
+            <div class="row">
+                <img id="current-image-v1">
+                <img id="current-image-v2">
+                <img id="current-image-v3">
+            </div>
+        </div>
+        <div id="icon-holder" class="holder">
+            <img id="bad-brain-icon" class="icon img-circle" src="/images/icons/no.svg">
+            <img id="good-brain-icon" class="icon img-circle" src="/images/icons/checked.svg">
+        </div>
+    </main>
+</div>
+</body>
+</html>
+
+
+
+

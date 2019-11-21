@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>CUBRIC</title>
+    <link rel="stylesheet" href="/css/tutorial.css">
+    <script src="/js/ajax/popper.min.js"></script>
+</head>
+
+<body class="text-center">
+<nav th:replace="~{new_templates/fragments/base.html :: nav}"></nav>
+<div th:replace="~{new_templates/fragments/base.html :: bootstrap-core-jquery}"></div>
+<main>
+    <section class="row justify-content-around mx-auto" style="width: 90%;">
+        <div class="tutorial-tile col-4 ">
+            <div class="card-body">
+                <h5 class="card-title">Can you help us analyse MRI brain scans and help cure brain diseases?</h5>
+                <p class="card-text">At Cardiff University Brain Research Imaging Centre (CUBRIC) we map out the pathways in the brain using state-of-the-art diffusion Magnetic Resonance Imaging (dMRI). Its important we map these pathways correctly. We need your help to tell us which pathways are wrong! Anyone can take part and no scientific background is needed. Join us and together we can learn more about the brain and help scientists pioneer cures for diseases such as dementia and schizophrenia.</p>
+            </div>
+        </div>
+    </section>
+    <section class="row justify-content-around mx-auto" style="width: 90%;">
+        <div class="tutorial-tile col-4" style="margin-right: 10%;">
+            <div class="card-body">
+                <h5 class="card-title">What is diffusion MRI?</h5>
+                <p class="card-text">Diffusion MRI is currently the only brain imaging technique that allows us to look at white matter in living people. It produces images like this.</p>
+                <img class="img-fluid" src="/images/training_images/image004.jpg">
+            </div>
+        </div>
+        <div class="tutorial-tile col-4">
+            <img class="img-fluid" src="/images/training_images/image001.png">
+        </div>
+    </section>
+    <section class="row justify-content-around mx-auto">
+        <div class="col-6">
+            <div class="tutorial-tile">
+                <h5 class="card-title">Why do we want to look at the white matter in the brain?</h5>
+                <img class="img-fluid" src="/images/training_images/image005.png">
+                <p class="card-textd">White matter is often referred to as ‘the wiring of the brain’ and is made up of structures called axons. Axons are important nerve fibres which carry information about our environment, our vital organs and even our memories. Bundles of axons join together to form pathways called fibre tracts which can transport this information to different parts of the brain. In certain brain diseases such as dementia and schizophrenia, some of these white matter pathways are thought to become disrupted.  Using diffusion MRI, researchers can identify these abnormal pathways and strive to develop better treatments that can target these areas in the brain.</p>
+            </div>
+        </div>
+    </section>
+    <section class="row justify-content-around mx-auto">
+        <div class="col-6">
+            <div class="tutorial-tile">
+                <h5 class="card-title">How does diffusion MRI work?</h5>
+                <div class="row">
+                    <img class="col-3 container-fluid" src="/images/training_images/image009.jpg">
+                    <img class="col-3 container-fluid" src="/images/training_images/image010.png">
+                </div>
+                <p class="card-textd">Diffusion MRI uses the random motion of water molecules to create a picture of the brain. In the grey matter, water molecules are free to move equally in all directions: However, axons in the white matter are covered in a waterproof coat called the myelin sheath. This means that water can only move in one direction - along the length of the axon
+                </p>
+                <img class="container-fluid" src="/images/training_images/image011.png">
+            </div>
+        </div>
+    </section>
+    <section class="row justify-content-around mx-auto">
+        <div class="col-6">
+            <div class="tutorial-tile">
+                <h5 class="card-title">We want you to help us model the fornix – but what is the fornix and why are we interested in it?</h5>
+                <img class="img-fluid" src="/images/training_images/image014.png">
+                <p class="card-textd">The fornix is a white matter bundle in the temporal lobe of the brain. It is shaped a bit like a wishbone in a chicken, with two ‘legs’ going into each hemisphere of the brain. It is a critical structure thought to be involved in memory formation, learning ability and advanced cognitive activities. Due to its role in memory systems, the fornix has become a focus of research in dementia. Diffusion MRI scans can reveal disease-related changes in the structure of the fornix before patients get any symptoms. This may help scientists identify individuals at high risk of developing Alzheimer’s.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="row justify-content-around mx-auto">
+        <div class="col-6">
+            <div class="tutorial-tile">
+                <h5 class="card-title">How do we model the fornix?</h5>
+                <p class="card-text">Using information from diffusion MRI we can reconstruct 3D fibre tracts in living brains. We do this using a software called probabilistic tractography. Here are some of the results of tractography.
+                </p>
+                <h6 class="card-subtitle mb-2 text-muted">Involuntary contributors to neuroscience</h6>
+                <p class="card-text">In 1848 Phineas Gage, a railroad worker, was using an iron rod to pack explosives. In an accident that detonated these explosives, the iron rod was driven through Gage’s frontal lobe. Miraculously, he survived the incident, however friends reported that he was ‘no longer Gage.’  He was said to have lost all sense of social inhibition, swearing publicly and frequently making inappropriate remarks. </p>
+                <img class="container-fluid" src="/images/training_images/image042.png">
+            </div>
+        </div>
+    </section>
+    <section class="row justify-content-around mx-auto">
+        <button class="mx-auto btn btn-raised btn-info btn-lg"><a href="/practice">Practice</a></button>
+    </section>
+</main>
+</body>
+</html>

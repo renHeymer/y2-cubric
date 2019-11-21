@@ -1,0 +1,120 @@
+
+/*
+Image being swiped
+ */
+
+body {
+    color: #fff;
+}
+#current-image {
+    max-width: 100%;
+    height: auto;
+    /*-webkit-box-shadow: 10px 10px 43px 1px rgba(245,245,245,0.32);*/
+    /*-moz-box-shadow: 10px 10px 43px 1px rgba(245,245,245,0.32);*/
+    /*box-shadow: 10px 10px 43px 1px rgba(245,245,245,0.32);*/
+}
+
+#tutorialLeft {
+    image-orientation: flip;
+    max-width: 15px;
+    max-length: 30px;
+    height: auto;
+    width: auto;
+}
+
+#tutorialRight {
+    max-width: 15px;
+    max-length: 30px;
+    height: auto;
+    width: auto;
+}
+
+#message {
+    display: none;
+}
+
+.holder {
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+}
+
+#current-image-v1 {
+    max-width:400px;
+    max-height:400px;
+    width: auto;
+    height: auto;
+    box-shadow: 15px 5px 15px #303030;
+}
+#current-image-v2, #current-image-v3 {
+    max-width:400px;
+    max-height:400px;
+    width: auto;
+    height: auto;
+    box-shadow: 15px 5px 15px #303030;
+}
+
+/*#v2-v3-holder {*/
+    /*flex-direction: column;*/
+/*}*/
+
+#image-holder {
+    margin-top: 4pc;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5pc;
+}
+
+#icon-holder {
+    justify-content: space-around;
+    height: auto;
+    width: 600px;
+    max-width: 600px;
+}
+
+/*
+Good-brain and bad-brain icons
+ */
+
+.icon {
+    width: 3pc;
+    height: auto;
+    margin-left: 1pc;
+    margin-right: 1pc;
+    align-self: flex-end;
+    z-index:1;
+    -webkit-transition:-webkit-transform 0.5s ease-in-out;
+    -moz-transition:-moz-transform 0.5s ease-in-out;
+    -o-transition:-o-transform 0.5s ease-in-out;
+    transition:transform 0.5s ease-in-out;
+
+}
+
+.icon:hover {
+    -webkit-transform:scale(2);
+    -moz-transform:scale(2);
+    -o-transform:scale(2);
+    transform:scale(2);
+}
+
+
+.ourForm {
+    margin-top: 10pc;
+    border-radius: 5pc;
+    padding: 5pc;
+}
+
+.tutorialImageHolder{
+    background: #000000;
+    width: 70%;
+    height: 100%;
+}
+
+
+#tryAnotherBatch, #startForReal {
+    display: none;
+}

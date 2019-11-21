@@ -1,0 +1,20 @@
+security:
+  oauth2:
+    client:
+      client-id: acme
+      client-secret: acmesecret
+      scope: read, write
+      auto-approve-scopes: '.*'
+
+google:
+  client:
+    clientId: 190242964002-beip1nvnnpsh755177epu46r72jlva1h.apps.googleusercontent.com
+    clientSecret: UopEQXvqIJQbmK8E2LYDvayM
+    accessTokenUri: https://www.googleapis.com/oauth2/v3/token
+    userAuthorizationUri: https://accounts.google.com/o/oauth2/auth
+    tokenName: oauth_token
+    authenticationScheme: query
+    clientAuthenticationScheme: form
+    scope: email
+  resource:
+    userInfoUri: https://www.googleapis.com/userinfo/v2/me

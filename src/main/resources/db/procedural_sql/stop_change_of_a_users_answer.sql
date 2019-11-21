@@ -1,0 +1,19 @@
+DROP TRIGGER IF EXISTS `CM621_1819_TEAM_5`.`swipes_BEFORE_UPDATE`;
+
+DELIMITER $$
+
+USE `cubric`$$
+
+CREATE DEFINER = CURRENT_USER
+TRIGGER `CM621_1819_TEAM_5`.`swipes_BEFORE_UPDATE`
+
+BEFORE UPDATE ON swipes
+	FOR EACH ROW
+		BEGIN
+			IF (NEW.is_good_scan != OLD.is_good_scan)
+				THEN
+            SIGNAL SQLSTATE VALUE '45000' SET MESSAGE_TEXT = 'You cannot change a users answer';
+			END IF;
+END$$
+
+DELIMITER ;

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Swipe</title>
+</head>
+<body>
+<nav th:replace="~{fragments/base.html :: nav-header}">
+</nav>
+<div th:replace="~{fragments/base.html :: common-dependencies}"></div>
+<link href="/css/app.css" rel="stylesheet">
+<script src="/js/swipe_data.js"></script>
+
+<script src="/webjars/sockjs-client/1.0.2/sockjs.min.js"></script>
+<script src="/webjars/stomp-websocket/2.3.3/stomp.min.js"></script>
+
+<div class="site-wrapper">
+    <main id="main-content">
+      <table id="crowdConfidence" class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Image</th>
+      <th scope="col">Total Number of Swipes</th>
+      <th scope="col">Good</th>
+      <th scope="col">Bad</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  </tbody>
+</table>
+    </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta th:name="_csrf" th:content="${_csrf.token}"/>
+    <meta th:name="_csrf_header" th:content="${_csrf.headerName}"/>
+    <title>CUBRIC</title>
+    <link href="/css/swipe.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+<nav th:replace="~{new_templates/fragments/base.html :: nav}"></nav>
+<div th:replace="~{new_templates/fragments/base.html :: bootstrap-core-jquery}"></div>
+<script src="/js/swipe.js" type="text/javascript"></script>
+<main class="vertical-center">
+    <div id="scan-holder" class="mx-auto my-auto">
+        <div class="row center-block well" id="scans">
+            <div class="col polaroid">
+                <img id="current-image-v1" class="container-fluid">
+                <div class="description-container">
+                    <p>Front View</p>
+                </div>
+            </div>
+            <div class="col polaroid">
+                <img id="current-image-v2" class="container-fluid">
+                <div class="description-container">
+                    <p>Side View</p>
+                </div>
+            </div>
+            <div class="col polaroid">
+                <img id="current-image-v3" class="container-fluid">
+                <div class="description-container">
+                    <p>Top View</p>
+                </div>
+            </div>
+        </div>
+        <div id="icon-holder" class="holder mx-auto">
+            <img id="bad-brain-icon" class="icon img-circle" src="/images/icons/no.svg">
+            <img id="good-brain-icon" class="icon img-circle" src="/images/icons/checked.svg">
+        </div>
+    </div>
+</main>
+</body>
+</html>
+
