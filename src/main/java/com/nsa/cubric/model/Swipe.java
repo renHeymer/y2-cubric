@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 
 /**
- * DTO containing all details about a user's swipe on a certain scan
+ * DTO containing all details about a user's swipe on a brain scan
  */
 @Data
 @NoArgsConstructor
